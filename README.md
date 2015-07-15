@@ -14,7 +14,7 @@ rails new [app_name] -m https://raw.github.com/dennybritz/rails_startup_template
 
 1. Adds the following gems:
   - [analytics-ruby](https://github.com/segmentio/analytics-ruby): I use [segment.io](https://segment.io/) as an anaytics provider. Segment.io is easy to integrate, asynchronous, and forwards data to other providers like Mixpanel and Kissmetrics.
-  - bcrypt-ruby: I usually implement authentication myself instead of using gems like Devise. This is needed for the `has_secure_password` functionality. [See API Doc](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html).
+  - [devise](https://github.com/plataformatec/devise): Devise is the easiest way to handle user login/authentication.
   - [bourbon](http://bourbon.io/): Bourbon provides useful SASS mixins for cross-browser compatibility.
   - [CanCan](https://github.com/ryanb/cancan): CanCan is an authorization library for Ruby on Rails which restricts what resources a given user is allowed to access.
   - (Optional) [haml-rails](http://haml.info): HAML is a beautiful templating language. I prefer it over ERB. 
@@ -25,6 +25,7 @@ rails new [app_name] -m https://raw.github.com/dennybritz/rails_startup_template
   - (test environment) [capybara](https://github.com/jnicklas/capybara): I use Capybara to write integration tests and simulate user behavior.
   - (test environment) [factory_girl_rails](https://github.com/thoughtbot/factory_girl): FactoryGirl provdes a flexible alternative to Rails fixtures. 
   - (production environment) [rails_12factor](https://devcenter.heroku.com/articles/rails-integration-gems): This is needed for deploying Rails 4 applications on [Heroku](http://heroku.com). 
+  - [better_errors](https://github.com/charliesome/better_errors): Better Errors gives a much nicer error page and includes a live console.
 
 2. Sets up [foreman](https://github.com/ddollar/foreman) to deal with environment variables and background services. Instead of using `rails s` you should use `foreman s`. Add your own environment variables in the `.env` file.
 
