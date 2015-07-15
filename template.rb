@@ -4,7 +4,8 @@
 # Segment.io as an analytics solution (https://github.com/segmentio/analytics-ruby)
 gem "analytics-ruby"
 # For encrypted password
-gem "bcrypt-ruby"
+gem "devise"
+
 # Useful SASS mixins (http://bourbon.io/)
 gem "bourbon"
 
@@ -31,6 +32,10 @@ gem_group :development do
   gem "rspec-rails"
   # Guard for automatically launching your specs when files are modified. (https://github.com/guard/guard-rspec)
   gem "guard-rspec"
+  
+  # Better Errors is better
+  gem "binding_of_caller"
+  gem "better_errors"
 end
 
 gem_group :test do
